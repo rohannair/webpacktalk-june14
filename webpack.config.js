@@ -42,16 +42,13 @@ module.exports = {
         NODE_ENV: JSON.stringify(process.env.NODE_ENV),
       },
     }),
-    new CopyWebpackPlugin([
-      { from: './src/index.html' },
-      { from: './src/styles.css' },
-    ]),
+    new CopyWebpackPlugin([{ from: './src/styles.css' }]),
     new webpack.LoaderOptionsPlugin({
       debug: !isProd,
     }),
-    // new HtmlWebpackPlugin({
-    //   inject: true,
-    //   template: './src/index.html',
-    // }),
+    new HtmlWebpackPlugin({
+      inject: true,
+      template: './src/index.html',
+    }),
   ],
 }
