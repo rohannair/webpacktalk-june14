@@ -1,5 +1,8 @@
-const Webpack = require('webpack')
+const webpack = require('webpack')
 const path = require('path') // path is native to Node.js
+
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 const isProd = process.env.NODE_ENV === 'production'
 
@@ -33,4 +36,22 @@ module.exports = {
     extensions: ['.js'],
   },
   target: 'web',
+  plugins: [
+    new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: JSON.stringify(process.env.NODE_ENV),
+      },
+    }),
+    new CopyWebpackPlugin([
+      { from: './src/index.html' },
+      { from: './src/styles.css' },
+    ]),
+    new webpack.LoaderOptionsPlugin({
+      debug: !isProd,
+    }),
+    // new HtmlWebpackPlugin({
+    //   inject: true,
+    //   template: './src/index.html',
+    // }),
+  ],
 }

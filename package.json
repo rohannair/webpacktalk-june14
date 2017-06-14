@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "npm run copy && webpack",
+    "build": "webpack",
     "copy": "cp ./src/index.html ./build && cp ./src/styles.css ./build",
     "compile": "babel src/index.js --out-file src/build.js",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -19,5 +19,9 @@
     "react": "^15.6.0",
     "react-dom": "^15.6.0",
     "webpack": "^2.6.1"
+  },
+  "devDependencies": {
+    "copy-webpack-plugin": "^4.0.1",
+    "html-webpack-plugin": "^2.28.0"
   }
 }
