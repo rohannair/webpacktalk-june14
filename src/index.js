@@ -1,10 +1,9 @@
-const e = React.createElement
 const APP_NODE = document.getElementById('app')
 
 class App extends React.Component {
   render() {
-    return e('div', { className: 'container' }, `Hello World!`)
+    return <div className="container">Hello World! Step 1</div>
   }
 }
 
-ReactDOM.render(e(App, {}, null), APP_NODE)
+ReactDOM.render(<App />, APP_NODE)
