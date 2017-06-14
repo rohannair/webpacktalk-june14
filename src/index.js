@@ -1,3 +1,7 @@
+import React from 'react'
+import ReactDOM from 'react-dom'
+import './styles'
+
 const APP_NODE = document.getElementById('app')
 
 class App extends React.Component {

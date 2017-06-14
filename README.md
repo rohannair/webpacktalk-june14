@@ -25,6 +25,16 @@
 - LoaderOptionsPlugin - Webpack options
 - Define plugin - to replace strings (super useful later!)
 
+## Step 4!
+- Lets add React and ReactDOM as required deps
+- Let's bring in a CSS-loader to get rid of the Copy
+- `$ yarn add react react-dom`
+- `$ yarn add style-loader css-loader --dev`
+
+## Step 5!
+- Let's add in webpack-dev-server
+- `$ yarn add webpack-dev-server --dev`
+
 ## Explanations!
 ### Babel
 - Javascript transpiler!

@@ -23,6 +23,11 @@ const our_module = {
       loader: 'babel-loader',
       exclude: /node_modules/,
     },
+    {
+      test: /\.css$/,
+      use: ['style-loader', 'css-loader'],
+      exclude: /node_modules/,
+    },
   ],
 }
 
@@ -33,7 +38,7 @@ module.exports = {
   module: our_module,
   resolve: {
     modules: ['./src', 'node_modules'],
-    extensions: ['.js'],
+    extensions: ['.js', '.css'],
   },
   target: 'web',
   plugins: [
@@ -42,7 +47,6 @@ module.exports = {
         NODE_ENV: JSON.stringify(process.env.NODE_ENV),
       },
     }),
-    new CopyWebpackPlugin([{ from: './src/styles.css' }]),
     new webpack.LoaderOptionsPlugin({
       debug: !isProd,
     }),
