@@ -11,12 +11,19 @@
 ## Step 1!
 - Let's add in Babel
 - `$ yarn add babel-cli babel-core --dev`
-- `$ yarn add babel-preset-env babel-preset-react --dev`
-
+- `$ yarn add babel-preset-env babel-preset-react --dev`=
 
 ## Step 2!
 - Let's add in Webpack
 - `$ yarn add webpack babel-loader`
+
+## Step 3!
+- Lets add some Webpack plugins
+- `$ yarn add copy-webpack-plugin html-webpack-plugin --dev`
+- Copy plugin - to move files
+- HTML plugin - to inject (dynamic)
+- LoaderOptionsPlugin - Webpack options
+- Define plugin - to replace strings (super useful later!)
 
 ## Explanations!
 ### Babel
