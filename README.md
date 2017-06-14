@@ -13,8 +13,18 @@
 - `$ yarn add babel-cli babel-core --dev`
 - `$ yarn add babel-preset-env babel-preset-react --dev`
 
+
+## Step 2!
+- Let's add in Webpack
+- `$ yarn add webpack babel-loader`
+
 ## Explanations!
 ### Babel
 - Javascript transpiler!
 - Walks and transforms the AST
 - Uses presets and plugins to transform the source code
+
+### Webpack
+- Module bundler for Javascript ecosystem
+- Lets us put together files in `node_modules` with our app `src` to create new builds
+- Needs a `webpack.config` file

@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "npm run copy && webpack",
+    "copy": "cp ./src/index.html ./build && cp ./src/styles.css ./build",
     "compile": "babel src/index.js --out-file src/build.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
