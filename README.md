@@ -35,6 +35,13 @@
 - Let's add in webpack-dev-server
 - `$ yarn add webpack-dev-server --dev`
 
+## Step 6!
+- Let's prepare this for production
+- `$ yarn add cross-env --dev`
+- Cross Env for platform parity
+- Let's clean build
+- `$ yarn add rimraf --dev`
+
 ## Explanations!
 ### Babel
 - Javascript transpiler!
